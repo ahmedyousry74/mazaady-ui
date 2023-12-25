@@ -1,0 +1,109 @@
+.content{
+    &.collapsed {
+        margin-left: 50px;
+    }
+    @media(max-width: 767px){
+        margin-left: 50px !important;
+    }
+    .filter_btns{
+        button{
+            &.active{
+                background-color: #52911B;
+                color: #fff;
+                font-weight: bold
+            }
+        }
+    }
+    .statistics{
+        .orders_summery{
+            border-radius: 0 40px 40px 40px;
+            @media(max-width: 580px){
+                border-radius: 5px 5px 0 0
+            }
+        }
+        .desc_summery{
+            border-radius: 0 40px 40px 40px;
+            @media(max-width: 580px){
+                border-radius:  0 0 5px 5px
+            }
+            .desc_summery_info{
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    background-color: #F1F1F1;
+                    height: 72px;
+                    width: 2px;
+                    left: -10px;
+                    @media(max-width: 1100px){
+                        height: 0;
+                    }
+                }
+                &:first-of-type{
+                    &:after{
+                        height: 0;
+                    }
+                }   
+            }
+         }
+         .today_order{
+             border-radius: 0 40px 40px 40px;
+             @media(max-width: 580px){
+                border-radius:  5px 5px 0 0
+            }
+             .title_today_order{
+                border-radius: 0 40px 0 40px;
+                @media(max-width: 580px){
+                    border-radius:  5px 5px 0 0
+                }
+                .input-group-text{
+                    background: linear-gradient(to right, #52911B, #80BD13);
+                    border: 0;
+                    img{
+                        margin: 8px auto;
+                    }
+                }
+             }
+             .today_order_table{
+                border-radius: 0 0 40px 40px;
+                @media(max-width: 580px){
+                    border-radius:  0 0 5px 5px
+                }
+                padding: 0;
+                table{
+                    tr{
+                        border-color: transparent !important
+                    }
+                }
+                .table>:not(:first-child){
+                    border: 0
+                }
+             }
+            .dropdown-toggle{
+                border-radius: 0 5px 5px 0;
+            }
+            .actions_btns_dots{
+                .dropdown_action_dots{
+                    &.block{
+                        transform: translate(-44px, 19px) !important
+                    }
+                }
+            }
+         }
+         .orders_Status{
+            border-radius: 37px 0 30px 50px;
+            @media(max-width: 580px){
+                border-radius:  5px 5px 0 0
+            }
+            .desc_status{
+               border-radius: 37px 0 29px 45px;
+               @media(max-width: 580px){
+                border-radius:  0 0 5px 5px
+               }
+            }
+            .progress{
+                height: 1.2rem !important
+            }
+        }
+    }
+}
